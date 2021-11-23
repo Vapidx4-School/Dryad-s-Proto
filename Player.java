@@ -8,6 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Player extends Actor
 {
+    private final int gravity = 20;
+    private int velocity;
+    private int jumpCounter;
+
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -17,12 +21,43 @@ public class Player extends Actor
         // Add your action code here.
         movement();
         interact();
+        velocity = 1;
     }
     public void movement(){
-    if(Greenfoot.isKeyDown("right")) setLocation(getX()+3, getY());
-    if(Greenfoot.isKeyDown("left")) setLocation(getX()-3, getY());
-    if(Greenfoot.isKeyDown("down")) setLocation(getX(), getY()+3);
-    if(Greenfoot.isKeyDown("up")) setLocation(getX(), getY()-3);
+        if (Greenfoot.isKeyDown("a")) {
+            setLocation(getX()-3, getY());
+        }
+        
+        if (Greenfoot.isKeyDown("d")) {
+            setLocation(getX()+3, getY());
+        }
+        
+        
+        if (Greenfoot.isKeyDown("w") && getY() > getWorld().getHeight() - 30)
+        {
+            jump();
+        }
+        if (Greenfoot.isKeyDown("w") && getY() > getWorld().getHeight() - 30)
+        {
+            jumpCounter++;
+        }
+        fall();
+    }
+     public void fall()
+    {
+        setLocation(getX(), getY() + velocity);
+        if (getY() > getWorld().getHeight() - 30) {
+            velocity = 0;
+        }
+        else {
+            velocity = velocity + gravity;
+        }
+    }
+
+  
+    public void jump()
+    {
+        velocity = -28;
     }
     public void interact(){
     if (Greenfoot.mouseClicked(null)){

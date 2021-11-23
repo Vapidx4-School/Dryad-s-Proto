@@ -30,5 +30,7 @@ public class MyWorld extends World
         addObject(player,57,212);
         Dryad dryad = new Dryad();
         addObject(dryad,296,107);
+        player.setLocation(34,369);
+        player.setLocation(132,266);
     }
 }
