@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MyWorld extends World
+public class MyWorld extends ScrollWorld
 {
 
     /**
@@ -16,7 +16,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1920, 1080, 1); 
+        super(600, 1080, 1, 1920, 1080); 
         prepare();
     }
     
@@ -26,12 +26,11 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-
         Ground ground = new Ground();
         addObject(ground,439,758);
-        Player player = new Player();
-        addObject(player,238,417);
         Ground ground2 = new Ground();
         addObject(ground2,1366,758);
+        
+        addCameraFollower(new Player(), 0, 0);
     }
 }
