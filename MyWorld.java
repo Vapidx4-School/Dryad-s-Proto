@@ -16,7 +16,7 @@ public class MyWorld extends ScrollWorld
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 1080, 1, 1920, 1080); 
+        super(1600, 900, 1, 1920, 1080); 
         prepare();
     }
     
