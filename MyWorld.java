@@ -16,7 +16,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(1920, 1080, 1); 
         prepare();
     }
     
@@ -26,11 +26,12 @@ public class MyWorld extends World
      */
     private void prepare()
     {
+
+        Ground ground = new Ground();
+        addObject(ground,439,758);
         Player player = new Player();
-        addObject(player,57,212);
-        Dryad dryad = new Dryad();
-        addObject(dryad,296,107);
-        player.setLocation(34,369);
-        player.setLocation(132,266);
+        addObject(player,238,417);
+        Ground ground2 = new Ground();
+        addObject(ground2,1366,758);
     }
 }
