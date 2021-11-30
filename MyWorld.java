@@ -8,7 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends ScrollWorld
 {
-
+    public Player player = new Player();
+    
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -17,6 +19,7 @@ public class MyWorld extends ScrollWorld
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1600, 900, 1, 1920, 1080); 
+        
         prepare();
     }
     
@@ -32,5 +35,8 @@ public class MyWorld extends ScrollWorld
         addObject(ground2,1366,758);
         
         addCameraFollower(new Player(), 0, 0);
+        
+        SpellBook spellbook = new SpellBook();
+        addObject(spellbook , player.getX(), player.getY());
     }
 }
