@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Grass here.
+ * Write a description of class SpellBook here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Ground extends ScrollActor
+public class SpellBook extends Player
 {
     /**
-     * Act - do whatever the Grass wants to do. This method is called whenever
+     * Act - do whatever the SpellBook wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act()
-    {
-        // Add your action code here.
+    
+    private Player player;
+    public void act() { 
     }
 }
