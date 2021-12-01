@@ -16,7 +16,9 @@ public class FireBolt extends SpellBook
     {
         // Add your action code here.
         //TODO: MAKE THE FIREBOLT SPAWN AT A SELECT INTERVAL
-        //SHOOT BOLT FROM THE ANGLE OF THE ORB
-        move(2);
+        move(5);
+        
+        
+        
     }
 }

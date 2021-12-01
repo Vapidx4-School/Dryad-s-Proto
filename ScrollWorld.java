@@ -43,6 +43,15 @@ public abstract class ScrollWorld extends World
     private final GreenfootImage bigBackground, back;
     private int scrollPosX, scrollPosY;
     
+    private final long nanoSecondsPerMillisecond = 1000000;
+    private final long nanoSecondsPerSecond = 1000000000;
+    private final long nanoSecondsPerMinute = 60000000000L;
+    private final long nanoSecondsPerHour = 3600000000000L;
+    private final int simulationSpeed = greenfoot.core.Simulation.getInstance().getSpeed();
+
+    private long startTime = 0;
+    private boolean running = true;
+    
     /**
      * Create a new ScrollWorld.
      * @param width The width of the scroll world in cells.
@@ -219,6 +228,43 @@ public abstract class ScrollWorld extends World
         return fullHeight;
     }
     
+    /** BY BRANDON: RETURNS*/
+    /**
+     * @author Brandon
+     * Returns the simulation speed in ms.
+     * 
+     */
+    public int getSimulationSpeed()
+    {
+    return simulationSpeed;
+    }
+    public long getElapsedMilliseconds() 
+    {
+        long elapsedTime;
+
+        if (running)
+            elapsedTime = (System.nanoTime() - startTime);
+        else
+            elapsedTime = (startTime);
+
+        return (elapsedTime / nanoSecondsPerMillisecond);
+    }
+    public long getElapsedSeconds() 
+    {
+        long elapsedTime;
+
+        if (running)
+            elapsedTime = (System.nanoTime() - startTime);
+        else
+            elapsedTime = (startTime);
+
+        return (elapsedTime / nanoSecondsPerSecond);
+    }
+    public long fps()
+    {
+    return (1000/simulationSpeed);
+    }
+    
     /** CAMERA MOVEMENT + ROTATION: */
     
     /**
@@ -336,4 +382,5 @@ public abstract class ScrollWorld extends World
         scrollPosX %= width;
         getBackground().drawImage(bigBackground, scrollPosX -width,scrollPosY -getHeight());
     }
+    
 }

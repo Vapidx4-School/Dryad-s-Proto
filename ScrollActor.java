@@ -1,4 +1,5 @@
 import greenfoot.*;
+import java.util.*;
 
 /**
  * An actor which ca be in a ScrollWorld.
@@ -31,6 +32,8 @@ public abstract class ScrollActor extends Actor
     private int globalX, globalY;
     private boolean isCameraFollower;
     private ScrollWorld world;
+    private static long ONE_SECOND = 1000000L * 1000L;
+    LinkedList<Long> frames = new LinkedList<>();
     
     /**
      * Create a new ScrollActor.
@@ -210,5 +213,23 @@ public abstract class ScrollActor extends Actor
         if (value) {
             setLocation(getX(), getY());
         }
+    }
+    
+    /** FPS */
+    public long fps()
+    {
+    //return (simulationSpeed/1000);
+    long time = System.nanoTime(); //Current time in nano seconds
+    frames.add(time); //Add this frame to the list
+    while(true){
+        long f = frames.getFirst(); //Look at the first element in frames
+        if(time - f > ONE_SECOND){ //If it was more than 1 second ago
+            frames.remove(); //Remove it from the list of frames
+        } else break;
+        /*If it was within 1 second we know that all other frames in the list
+         * are also within 1 second
+        */
+    }
+    return frames.size(); //Return the size of the list
     }
 }
