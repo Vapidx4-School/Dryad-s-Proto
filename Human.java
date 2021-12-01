@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Human extends Actor
+public class Human extends Camp
 {
     /**
      * Act - do whatever the Potato wants to do. This method is called whenever
@@ -16,6 +16,8 @@ public class Human extends Actor
     {
         // Add your action code here.
         chase();
+        eat(Player.class);
+        
     }
     public void chase()
     {

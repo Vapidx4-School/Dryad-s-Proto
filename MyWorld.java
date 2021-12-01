@@ -45,5 +45,7 @@ public class MyWorld extends ScrollWorld
         spellBook.setLocation(3,3);
         Time time = new Time();
         addObject(time,3,3);
+        Dryad dryad = new Dryad();
+        addObject(dryad,530,534);
     }
 }

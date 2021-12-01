@@ -17,8 +17,15 @@ public class FireBolt extends SpellBook
         // Add your action code here.
         //TODO: MAKE THE FIREBOLT SPAWN AT A SELECT INTERVAL
         move(5);
+        eat(Human.class);
         
         
-        
+    }
+    public void eat(Class clss)
+    {
+        Actor actor = getOneObjectAtOffset(0, 0, clss);
+        if(actor != null) {
+            getWorld().removeObject(actor);
+        }
     }
 }

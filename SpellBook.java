@@ -45,7 +45,7 @@ public class SpellBook extends ScrollActor
     }
     private void checkForSpawning() // call from act method
     {
-    spawnTimer = (getWorld().getElapsedMilliseconds()%100);
+    spawnTimer = (fireRate()-1);
     if (spawnTimer == 0) // at each timer reset
     {
     FireBolt firebolt = new FireBolt();    
@@ -56,13 +56,12 @@ public class SpellBook extends ScrollActor
     }
     public void attack()
     {
-    fireRate();
-    checkForSpawning();
-    /*if (Greenfoot.isKeyDown("t"))
+    
+    if (Greenfoot.isKeyDown("t"))
     {
     checkForSpawning();
     }
-    */
+    
     }
     public void orbit()
     {
