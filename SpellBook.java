@@ -45,14 +45,22 @@ public class SpellBook extends ScrollActor
     }
     private void checkForSpawning() // call from act method
     {
-    spawnTimer = (fireRate()-1);
+    /*spawnTimer = (fireRate()-1);
     if (spawnTimer == 0) // at each timer reset
     {
     FireBolt firebolt = new FireBolt();    
 
     getWorld().addObject(firebolt, getX(), getY());
     firebolt.setRotation(getRotation());
+    }*/
+    
+    if(Greenfoot.getRandomNumber(100) < 20){
+    FireBolt firebolt = new FireBolt();    
+
+    getWorld().addObject(firebolt, this.getX(), this.getY());
+    firebolt.setRotation(getRotation());
     }
+    //Greenfoot.playSound("sfx-magic13.mp3");
     }
     public void attack()
     {

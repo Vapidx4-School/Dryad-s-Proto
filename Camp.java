@@ -10,6 +10,11 @@ public class Camp extends Animal
 {
     private int millis = (int)(System.currentTimeMillis()%1000);
     private int spawnTimer;
+    private int xOffset, yOffset;
+    int step = 1;
+    int spawnAmount = 3;
+    private Human[] humans;
+    
     GifImage gifImage = new GifImage("evil_wizard_idle.gif");
     /**
      * Act - do whatever the Camp wants to do. This method is called whenever
@@ -18,8 +23,9 @@ public class Camp extends Animal
     public void act()
     {
         
-        checkForSpawning();
+        //checkForSpawning();
         setImage(gifImage.getCurrentImage());
+        phaseOne();
 
     }
     private void checkForSpawning() // call from act method
@@ -40,4 +46,65 @@ public class Camp extends Animal
    
    
     }
+    private void phaseOne()
+    {
+    //step one: Hover over player
+    //spawn();
+    chase();
+    if(Greenfoot.getRandomNumber(100) < 20){
+    spawn();
+    }
+    /**switch (step){
+    case 1:
+    chase();
+    if(Greenfoot.getRandomNumber(100) < 1){
+    step = 2;
+    }
+    case 2:
+    spawn();
+    if(Greenfoot.getRandomNumber(100) < 50){
+    step = 1;
+    }
+    //rush();
+    }**/
+    //step two: Charge at player
+    }
+    public void chase()
+    {
+    
+    Actor player = (Actor)getWorld().getObjects(Player.class).get(0);
+    //turnTowards(player.getX(), player.getY()-200);
+    if(getX() != player.getX() && getY() != player.getY() ){
+        turnTowards(player.getX(), player.getY()-400);
+        move(5);
+    }
+    else{
+    setRotation(0);
+    move(0);
+    }
+    
+    }
+    public void spawn()
+    {
+    humans= new Human[spawnAmount];  
+    MyWorld world = (MyWorld)getWorld();
+    int i = 0;
+        while (i < spawnAmount) {
+            
+            Human human = new Human();  
+            world.addObject(human, getX(), getY());  
+            humans[i] = human;
+            i++;
+            break;
+        }
+        
+    }
+    public void rush()
+    {
+    Actor player = (Actor)getWorld().getObjects(Player.class).get(0);
+    
+    turnTowards(player.getX(), player.getY()-200);
+    move(5);
+    }
+    
 }   

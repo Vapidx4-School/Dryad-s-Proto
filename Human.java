@@ -16,13 +16,20 @@ public class Human extends Camp
     {
         // Add your action code here.
         chase();
-        eat(Player.class);
-        
+        consume(Player.class);
     }
     public void chase()
     {
     move(2);
     Actor player = (Actor)getWorld().getObjects(Player.class).get(0);
     turnTowards(player.getX(), player.getY());
+    }
+    public void consume(Class clss)
+    {
+        Actor actor = getOneObjectAtOffset(0, 0, clss);
+        if(actor != null) {
+            getWorld().removeObject(actor);
+            Greenfoot.setWorld(new LOSE());
+        }
     }
     }

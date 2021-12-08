@@ -52,6 +52,9 @@ public abstract class ScrollWorld extends World
     private long startTime = 0;
     private boolean running = true;
     
+    
+
+    
     /**
      * Create a new ScrollWorld.
      * @param width The width of the scroll world in cells.
@@ -93,6 +96,7 @@ public abstract class ScrollWorld extends World
         bigBackground = new GreenfootImage(width+width, height+height);
         setNewBackground(back);
     }
+    /**/
     
     /** EXTRA METHODS: */
     

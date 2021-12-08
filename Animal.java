@@ -14,6 +14,8 @@ import java.util.ArrayList;
 public class Animal extends ScrollActor
 {
     private static final int WALKING_SPEED = 5;
+    int spawnAmount = 3;
+    private Human[] humans;
 
     /**
      * Move forward in the current direction.
@@ -61,4 +63,6 @@ public class Animal extends ScrollActor
             getWorld().removeObject(actor);
         }
     }
+    
+    
 }
