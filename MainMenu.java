@@ -15,14 +15,14 @@ public class MainMenu extends ScrollWorld
      */
     public MainMenu()
     {
-    super(900, 716, 1, 1920, 716);
+    super(900, 716, 1, 1000, 716);
     Greenfoot.start();    
     }
     
     public void act()
     {
         showText("Move with WASD", 700, 500);
-        showText("Shoot with T", 700, 400);
+        showText("Shoot with Space", 700, 400);
         showText("Press the ORB to spawn the boss", 725, 300);
         showText("Avoid the humans flying towards you and shoot down the boss", 500, 100);
         if(Greenfoot.mouseClicked(null))

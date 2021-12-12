@@ -26,12 +26,18 @@ public class END extends ScrollWorld
      */
     private void prepare()
     {
+        Greenfoot.start();
         Ground ground = new Ground();
         addObject(ground,451,683);
-        Player player = new Player();
-        addObject(player,345,553);
+        addCameraFollower(new Player(), 0, 0);
         SpellBook spellBook = new SpellBook();
         addObject(spellBook,4,7);
         removeObject(spellBook);
+        Ground ground2 = new Ground();
+        addObject(ground2,771,683);
+        Ground ground3 = new Ground();
+        addObject(ground3,695,683);
+        Ground ground4 = new Ground();
+        addObject(ground4,833,682);
     }
 }

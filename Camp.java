@@ -74,14 +74,27 @@ public class Camp extends Animal
     
     Actor player = (Actor)getWorld().getObjects(Player.class).get(0);
     //turnTowards(player.getX(), player.getY()-200);
-    if(getX() != player.getX() && getY() != player.getY() ){
+    /*if(getX() != player.getX() && getY() != player.getY() ){
+        if(Greenfoot.getRandomNumber(100)<10){
         turnTowards(player.getX(), player.getY()-400);
+        turn(45);
         move(5);
+        
+        }
+        else{
+        turnTowards(player.getX(), player.getY()-400);
+        }
     }
     else{
-    setRotation(0);
-    move(0);
-    }
+        setRotation(0);
+        }*/
+        move(5);
+        if(Greenfoot.getRandomNumber(100)<10){
+        turnTowards(player.getX(), player.getY()-400);
+        turn(45);
+        }
+        
+    
     
     }
     public void spawn()

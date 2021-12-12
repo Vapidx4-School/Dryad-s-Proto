@@ -54,18 +54,18 @@ public class SpellBook extends ScrollActor
     firebolt.setRotation(getRotation());
     }*/
     
-    if(Greenfoot.getRandomNumber(100) < 20){
+    if(Greenfoot.getRandomNumber(100) < 30){
     FireBolt firebolt = new FireBolt();    
 
     getWorld().addObject(firebolt, this.getX(), this.getY());
-    firebolt.setRotation(getRotation());
+    firebolt.setRotation(this.getRotation());
     }
     //Greenfoot.playSound("sfx-magic13.mp3");
     }
     public void attack()
     {
     
-    if (Greenfoot.isKeyDown("t"))
+    if (Greenfoot.isKeyDown("space"))
     {
     checkForSpawning();
     }

@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Human extends Camp
+public class Human extends Actor
 {
     /**
      * Act - do whatever the Potato wants to do. This method is called whenever
@@ -17,6 +17,7 @@ public class Human extends Camp
         // Add your action code here.
         chase();
         consume(Player.class);
+        eat(FireBolt.class);
     }
     public void chase()
     {
@@ -30,6 +31,15 @@ public class Human extends Camp
         if(actor != null) {
             getWorld().removeObject(actor);
             Greenfoot.setWorld(new LOSE());
+        }
+    }
+    public void eat(Class clss)
+    {
+       Actor actor = getOneObjectAtOffset(0, 0, clss);
+       MyWorld world = (MyWorld)getWorld();
+        if(isTouching(FireBolt.class)) {
+            getWorld().removeObject(getOneIntersectingObject(FireBolt.class));
+            
         }
     }
     }
