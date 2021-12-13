@@ -16,7 +16,8 @@ public class Cutscene02 extends World
         "V: Yea, it sure was",
         "Drya: Now, lets escape that beast charging right at you!",
         "V: WHAT BEAST!?!",
-        "Drya: JUST RUUUUUUUN!!!"
+        "Drya: JUST RUUUUUUUN!!!",
+        "Drya: Oh yea, just try and find the door so you can return to the other dimension."
     };
     /**
      * Constructor for objects of class Cutscene02.
@@ -58,6 +59,6 @@ public class Cutscene02 extends World
     private void showDialogue()
     {       
             try {showText(log[count], 450, 300);}
-            catch(Exception e){Greenfoot.setWorld(new MyWorld());}
+            catch(Exception e){Greenfoot.setWorld(new RUN());}
     }
 }

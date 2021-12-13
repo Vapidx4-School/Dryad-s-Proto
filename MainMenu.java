@@ -17,6 +17,10 @@ public class MainMenu extends World
     {
         super(1228, 717, 1);
         Greenfoot.start();    
+        GreenfootSound sound = new GreenfootSound("Podington Bear - Movin On Up.mp3");
+         
+        sound.playLoop();
+        
         prepare();
     }
 

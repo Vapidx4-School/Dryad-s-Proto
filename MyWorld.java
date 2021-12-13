@@ -24,7 +24,8 @@ public class MyWorld extends ScrollWorld
         hp = 2000;
         showScore();
         showHealth();
-        Greenfoot.playSound("yes.mp3");
+        
+        Greenfoot.start();
         
         prepare();
     }
