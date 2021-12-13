@@ -6,30 +6,36 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MainMenu extends ScrollWorld
+public class MainMenu extends World
 {
-    
+
     /**
      * Constructor for objects of class MainMenu.
      * 
      */
     public MainMenu()
     {
-    super(900, 716, 1, 1000, 716);
-    Greenfoot.start();    
+        super(1228, 717, 1);
+        Greenfoot.start();    
+        prepare();
     }
-    
+
     public void act()
     {
-        showText("Move with WASD", 700, 500);
-        showText("Shoot with Space", 700, 400);
-        showText("Press the ORB to spawn the boss", 725, 300);
-        showText("Avoid the humans flying towards you and shoot down the boss", 500, 100);
-        if(Greenfoot.mouseClicked(null))
-        {
-                    Greenfoot.setWorld(new MyWorld());
-        }
+
     }
-    
-    
+
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+        Play_Button play_Button = new Play_Button();
+        addObject(play_Button,582,418);
+        Help_Button help_Button = new Help_Button();
+        addObject(help_Button,150,421);
+        Credits_Button credits_Button = new Credits_Button();
+        addObject(credits_Button,988,415);
+    }
 }
