@@ -30,7 +30,7 @@ public class Human extends Actor
         Actor actor = getOneObjectAtOffset(0, 0, clss);
         if(actor != null) {
             getWorld().removeObject(actor);
-            Greenfoot.setWorld(new LOSE());
+            Greenfoot.setWorld(new LOSE02());
         }
     }
     public void eat(Class clss)

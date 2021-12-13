@@ -32,7 +32,7 @@ public class Player extends ScrollActor
         checkFalling();
         jumping = false;
         setImage(gifImage.getCurrentImage());
-        interact();
+       // interact();
         
         
     }

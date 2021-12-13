@@ -45,6 +45,7 @@ public class GifImage
             time = System.currentTimeMillis();
         }
     }
+    
 
     /**
      * Copy the given GifImage.  This is faster, and uses less memory, than loading the same

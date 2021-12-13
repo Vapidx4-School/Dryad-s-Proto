@@ -49,11 +49,14 @@ public class MyWorld extends ScrollWorld
         addObject(spellBook,0,0);
 
         spellBook.setLocation(3,3);
-        Time time = new Time();
-        addObject(time,3,3);
-        Dryad dryad = new Dryad();
-        addObject(dryad,530,534);
+        // Time time = new Time();
+        //addObject(time,3,3);
+        
+        Camp camp = new Camp();
+        addObject(camp,426,371);
+        
     }
+
     public void addScore(int points)
     {
         score = score + points;
@@ -66,7 +69,7 @@ public class MyWorld extends ScrollWorld
         showHealth();
         if (hp == 0) {
             Greenfoot.playSound("sfx-magic13.mp3");
-            Greenfoot.setWorld(new END());
+            Greenfoot.setWorld(new Cutscene02());
             Greenfoot.stop();
         }
     }
