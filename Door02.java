@@ -9,8 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Door02 extends ScrollActor
 {
     /**
-     * Act - do whatever the Door02 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Proceeds to the next level
      */
     public void act()
     {

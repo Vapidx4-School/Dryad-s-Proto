@@ -19,8 +19,8 @@ public class Time extends ScrollActor
     private long startTime = 0;
     private boolean running = true;
     /**
-     * Act - do whatever the Time wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * A class that gets the current time
+     * Its used to get the firerate and fps of the game
      */
     public void act()
     {

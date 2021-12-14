@@ -10,8 +10,8 @@ public class DreamSucker extends Actor
 {
     GifImage gif = new GifImage("DreamSucker.gif");
     /**
-     * Act - do whatever the DreamSucker wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Tutorial monster that you have to shoot down
+     * It teleports randomly once hit
      */
     public void act()
     {

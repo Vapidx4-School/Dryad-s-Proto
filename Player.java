@@ -21,8 +21,9 @@ public class Player extends ScrollActor
     GifImage gifImage = new GifImage("bluewizard.gif");
 
     /**
-     * Act - do whatever the Player wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Its you!
+     * Allows the player to move left, right and jump on certain levels.
+     * Also they fall, because of gravity
      */
     public void act()
     {

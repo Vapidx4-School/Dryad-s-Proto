@@ -9,8 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Dialogue03 extends Button
 {
     /**
-     * Act - do whatever the Dialogue03 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Proceeds to the next scene or menu
      */
     public void act()
     {

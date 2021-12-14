@@ -9,8 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class SpellBook extends ScrollActor
 {
     /**
-     * Act - do whatever the SpellBook wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Use this to cast your spells!
+     * Fireballs has a random percent chance of spawning on top of this actor once the spacebar is pressed
+     * It also orbits the player by following the mouse!
      */
     private int angle;
     private float spawnTimer;

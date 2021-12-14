@@ -10,8 +10,7 @@ public class Leaf extends SpellBook01
 {
     GifImage gifImage = new GifImage("FB000.gif");
     /**
-     * Act - do whatever the Leaf wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * The magic spell casted by V, consumes the spells casted by the Demon, adds score and damages the demon on certain levels
      */
     public void act()
     {

@@ -9,8 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class FallOff extends ScrollActor
 {
     /**
-     * Act - do whatever the FallOff wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * When you fall on this... you die!
+     * You are set back to the start of lvl 2
      */
     public void act()
     {

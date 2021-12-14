@@ -9,8 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Human extends Actor
 {
     /**
-     * Act - do whatever the Potato wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Weapon of choice casted by the demons
+     * Chases player and eliminates them once it touches them
+     * Also deletes the fireballs from the world once it touches it
      */
     public void act()
     {
