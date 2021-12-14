@@ -11,6 +11,7 @@ public class Cutscene01 extends World
     private int count;
     private String[] log = 
     {
+        "Left click to proceed dialogue...",
         "Drya: Congrats, it seems like youre getting the hang of things!",
         "V: I told you that I wasn't ready!!!",
         "Drya: Oh well, but you still manage to pass the test",
@@ -18,8 +19,9 @@ public class Cutscene01 extends World
         "V: Ughhh",
         "Drya: Atleast you'll be able to fly and move more freely now!",
         "Drya: Now lets wreck that evil Camp Demon out there!",
-        "Drya: Just try not to get hit... One shot and you're out!"
-    };
+        "Drya: Just try not to get hit... One shot and you're out!",
+        "Left: A   Right: D    Fly: W    Shoot: Space",
+        "Remember that you wont be able to fly in the first level..."};
     /**
      * Constructor for objects of class Cutscene01.
      * 

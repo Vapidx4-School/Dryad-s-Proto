@@ -17,7 +17,10 @@ public class Cutscene02 extends World
         "Drya: Now, lets escape that beast charging right at you!",
         "V: WHAT BEAST!?!",
         "Drya: JUST RUUUUUUUN!!!",
-        "Drya: Oh yea, just try and find the door so you can return to the other dimension."
+        "Drya: Oh yea, just try and find the door so you can return to the other dimension.",
+        "You'll only be able to jump when you are about to go over the cliff...",
+        "Just remember that if you die, you'll be returned to the previous level",
+        
     };
     /**
      * Constructor for objects of class Cutscene02.
@@ -27,8 +30,8 @@ public class Cutscene02 extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 725, 1); 
-        prepare();
         Greenfoot.start();
+        prepare();
         showDialogue();
      
     }

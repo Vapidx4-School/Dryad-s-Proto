@@ -16,8 +16,8 @@ public class Orb extends Actor
     {
         // Add your action code here.
         chase();
-        consume(Player.class);
-        eat(FireBolt.class);
+        consume(Player02.class);
+        eat(Leaf01.class);
     }
     public void chase()
     {

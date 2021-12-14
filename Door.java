@@ -20,6 +20,7 @@ public class Door extends Actor
     setImage(image);
     
     if(isTouching(Player01.class)){
+        Greenfoot.playSound("sfx-magic13.mp3");
         Greenfoot.setWorld(new Cutscene01());
         }
     }

@@ -52,6 +52,7 @@ public class Camp extends Animal
     //spawn();
     chase();
     if(Greenfoot.getRandomNumber(100) < 20){
+    Greenfoot.playSound("laserShoot.wav");
     spawn();
     }
     /**switch (step){

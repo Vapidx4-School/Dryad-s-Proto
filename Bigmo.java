@@ -25,7 +25,6 @@ public class Bigmo extends ScrollActor
         // Add your action code here.
         setImage(gifImage.getCurrentImage());
         moveRight();
-        consume(Player02.class);
     }
     public void fall()
     {
@@ -57,12 +56,5 @@ public class Bigmo extends ScrollActor
         jumping = false;
         }
     }
-    public void consume(Class clss)
-    {
-        Actor actor = getOneObjectAtOffset(0, 0, clss);
-        if(actor != null) {
-            getWorld().removeObject(actor);
-            Greenfoot.setWorld(new LOSE02());
-        }
-    }
+    
 }

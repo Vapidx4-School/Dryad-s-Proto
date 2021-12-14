@@ -32,6 +32,7 @@ public class Player02 extends Actor
         jumping = false;
         
         if(isTouching(Door02.class)){
+        Greenfoot.playSound("sfx-magic13.mp3");
         Greenfoot.setWorld(new Cutscene03());
         }
         

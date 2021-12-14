@@ -37,6 +37,7 @@ public class SpellBook01 extends Player01
     }*/
     
     if(Greenfoot.getRandomNumber(100) < 10){
+    Greenfoot.playSound("laserShoot2.wav");
     Leaf leaf = new Leaf();    
 
     getWorld().addObject(leaf, this.getX(), this.getY());

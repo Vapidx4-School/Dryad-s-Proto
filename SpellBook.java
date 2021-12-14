@@ -55,6 +55,8 @@ public class SpellBook extends ScrollActor
     }*/
     
     if(Greenfoot.getRandomNumber(100) < 30){
+    Greenfoot.playSound("laserShoot2.wav");
+
     FireBolt firebolt = new FireBolt();    
 
     getWorld().addObject(firebolt, this.getX(), this.getY());

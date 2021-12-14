@@ -36,7 +36,8 @@ public class SpellBook02 extends Player02
     firebolt.setRotation(getRotation());
     }*/
     
-    if(Greenfoot.getRandomNumber(100) < 20){
+    if(Greenfoot.getRandomNumber(100) < 30){
+    Greenfoot.playSound("laserShoot2.wav");
     Leaf01 leaf = new Leaf01();    
 
     getWorld().addObject(leaf, this.getX(), this.getY());

@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Dialogue extends Actor
+public class Dialogue extends Button
 {
     /**
      * Act - do whatever the Dialogue wants to do. This method is called whenever

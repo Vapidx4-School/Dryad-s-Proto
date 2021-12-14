@@ -18,7 +18,10 @@ public class DreamSucker extends Actor
         // Add your action code here.
         setImage(gif.getCurrentImage());
         Cabin world = (Cabin)getWorld();
+        
         if(isTouching(Leaf.class)){
+        Greenfoot.playSound("pickupCoin.wav");
+
         setLocation(Greenfoot.getRandomNumber(885), Greenfoot.getRandomNumber(775));
         world.addScore(5);
         }

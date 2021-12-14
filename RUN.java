@@ -49,8 +49,8 @@ public class RUN extends ScrollWorld
         ground10.setLocation(8720,772);
 
         Bigmo bigmo = new Bigmo();
-        addObject(bigmo,333,463);
-        CopyOfCamp copyOfCamp = new CopyOfCamp();
+        addObject(bigmo,333,465);
+        RunCamp copyOfCamp = new RunCamp();
         addObject(copyOfCamp,828,77);
 
         Player02 player02 = new Player02();
@@ -61,5 +61,19 @@ public class RUN extends ScrollWorld
 
         Door02 door02 = new Door02();
         addObject(door02,8500,660);
+        RunCamp copyOfCamp2 = new RunCamp();
+        addObject(copyOfCamp2,223,77);
+
+        Hitbox hitbox = new Hitbox();
+        addObject(hitbox,114,700);
+
+        RunCamp runCamp3 = new RunCamp();
+        addObject(runCamp3,807,553);
+        FallOff fallOff = new FallOff();
+        addObject(fallOff,8129,759);
+        FallOff fallOff2 = new FallOff();
+        addObject(fallOff2,8177,758);
+        FallOff fallOff3 = new FallOff();
+        addObject(fallOff3,8206,757);
     }
 }
